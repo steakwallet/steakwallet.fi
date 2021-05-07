@@ -267,7 +267,7 @@ const IndexPage = () => {
     <SEO 
       title="Start earning interest on your crypto"
       description="Steakwallet is the easiest and safest way to steak your crypto assets across blockchains."
-      image={"http://steakwallet.xyz"+ogImg}
+      image={"http://thesteakwallet.com"+ogImg}
     />
     <SpaceSteak>
       <Canvas gl={{ alpha: false }} shadows dpr={[1, 2]} >
@@ -291,7 +291,7 @@ const IndexPage = () => {
       <HeroContent>
         <h1>Steaking Made Simple</h1>
         <p>Steakwallet is the easiest and safest way to steak your crypto assets across blockchains. Start earning interest on your crypto in seconds.</p>
-        <CTA>Sign up for early access</CTA>
+        <CTA href="https://form.typeform.com/to/Qemm4FMQ">Sign up for early access</CTA>
       </HeroContent>
       <FeatureContent>
         <FeatureItem>

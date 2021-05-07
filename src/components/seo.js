@@ -52,7 +52,7 @@
          },
          {
            property: `og:url`,
-           content: `https://www.steakwallet.xyz`,
+           content: `https://www.thesteakwallet.com`,
          },
          {
            name: `twitter:card`,
