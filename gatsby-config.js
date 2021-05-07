@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "steakwallet-web",
+    title: "Steakwallet",
+    description: `Start earning interest on your crypto in seconds.`,
   },
   plugins: [
     "gatsby-plugin-styled-components",
