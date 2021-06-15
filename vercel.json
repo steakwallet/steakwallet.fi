@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/chat",
+      "destination": "https://discord.com/channels/836493847348510741/836493847953014827",
+      "permanent": true
+    },
+    {
+      "source": "/support",
+      "destination": "https://www.notion.so/Steakwallet-Help-Center-9d41301c2bf947ae94e44b2759dd24e6",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "https://www.notion.so/Steakwallet-LLC-Privacy-Policy-229936f3d6d941cb93c72b5dc1e07f76",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "https://www.notion.so/Steakwallet-Terms-of-Use-adee5a91afab4eb58bd89b6d170504d8",
+      "permanent": true
+    }
+  ]
+}
