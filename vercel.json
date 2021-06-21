@@ -19,6 +19,11 @@
       "source": "/terms",
       "destination": "https://www.notion.so/Steakwallet-Terms-of-Use-adee5a91afab4eb58bd89b6d170504d8",
       "permanent": true
+    },
+    {
+      "source": "/changelog",
+      "destination": "https://www.notion.so/Steakwallet-Changelog-ec5fbe0843b941759d7fe9c70c95daf7",
+      "permanent": true
     }
   ]
 }
