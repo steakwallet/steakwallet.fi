@@ -9,6 +9,7 @@ import appleBtn from "../images/appleBtn.svg";
 import androidBtn from "../images/android_coming_soon.svg";
 import flexaReg from "../fonts/GT-Flexa-Standard-Regular.woff2";
 import flexaBold from "../fonts/GT-Flexa-Standard-Bold.woff2";
+import interReg from "../fonts/Inter-Regular.ttf";
 import multichain from "../images/multichain.jpg";
 import easy from "../images/easy.jpg";
 import keys from "../images/keys.jpg";
@@ -28,6 +29,12 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "flexa";
     src: url(${flexaReg});
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url(${interReg});
     font-weight: normal;
     font-style: normal;
   }
@@ -99,7 +106,7 @@ const NavBar = styled.div`
     color: black;
     text-decoration: none;
     pointer-events: auto;
-    font-family: inter;
+    font-family: ${interReg};
     font-weight: 500;
     &:hover {
       text-decoration: underline;
