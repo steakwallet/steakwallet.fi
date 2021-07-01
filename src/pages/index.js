@@ -99,6 +99,8 @@ const NavBar = styled.div`
     color: black;
     text-decoration: none;
     pointer-events: auto;
+    font-family: inter;
+    font-weight: 500;
     &:hover {
       text-decoration: underline;
       cursor: pointer;
@@ -119,6 +121,9 @@ const LogoImg = styled.img`
   @media (min-width: ${lg}) {
     width: 170px;
   }
+  @media (max-width: ${lg}) {
+    width: 140px;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -135,7 +140,7 @@ const HeroContent = styled.div`
   margin-bottom: -20vh;
   h1 {
     max-width: 90vw;
-    font-weight: normal;
+    font-weight: 700;
     font-size: clamp(16px, 15vw, 56px);
     line-height: 1em;
     margin-bottom: 1rem;
@@ -155,6 +160,7 @@ const HeroContent = styled.div`
   p {
     max-width: 540px;
     font-size: 1rem;
+    font-weight: 400;
     line-height: 1.5rem;
     text-align: center;
     margin: 0 2rem 3rem 2rem;
@@ -185,9 +191,6 @@ const AppleBtn = styled.img`
   width: 218px;
   height: auto;
   cursor: pointer;
-  @media (min-width: ${lg}) {
-    width: 218px;
-  }
 `;
 
 const AndroidBtn = styled.img`
@@ -210,6 +213,18 @@ const Ape = styled.img`
   @media (min-width: ${lg}) {
     width: 218px;
   }
+`;
+
+const MobileImg = styled.img`
+  // width: 218px;
+  // height: auto;
+  // margin-top: 1.5rem;
+  // cursor: pointer;
+  // position: relative;
+  // bottom: 5rem;
+  // @media (min-width: ${lg}) {
+  //   width: 218px;
+  // }
 `;
 
 const FeatureContent = styled.div`
@@ -265,11 +280,17 @@ const Footer = styled.footer`
     flex-direction:column;
   }
 
+  p{
+    font-weight: 700;
+  }
+
   a {
     color: black;
     text-decoration: none;
     pointer-events: auto;
     padding-top:.5rem;
+
+    font-weight:400;
     &:hover {
       text-decoration: underline;
       cursor: pointer;
@@ -379,7 +400,7 @@ const IndexPage = () => {
         </HeroContent>
         <FeatureContent>
           <FeatureItem>
-            <img src={cta} alt="Multi-chain" />
+            <MobileImg src={cta} alt="Multi-chain" />
             {/* <div>
               <h3>Multi-Chain Support</h3>
               <p>
