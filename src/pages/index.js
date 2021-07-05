@@ -316,7 +316,7 @@ const IndexPage = () => {
 
           <div style={{ zIndex: "100" }}>
             <a
-              href="https://apps.apple.com/us/app/steakwallet/id1569375204"
+              href="https://apps.apple.com/app/steakwallet/id1569375204?l=en"
               target="_blank"
             >
               <AppleBtn src={appleBtn} alt="Download app btn" />
