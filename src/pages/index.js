@@ -16,8 +16,7 @@ import keys from "../images/keys.jpg";
 import SEO from "../components/seo";
 import ogImg from "../images/ogimage.png";
 import cta from "../images/cta.svg";
-import steakMobile from "../images/steakMobile.svg";
-import TestImg from "../images/testIMG.jpg";
+import steakMobile from "../images/steakMobile.jpg";
 import ape from "../images/ape.svg";
 
 const lg = "684px";
@@ -332,7 +331,6 @@ const IndexPage = () => {
         <FeatureContent>
           <FeatureItem>
             <MobileImg src={steakMobile} alt="Multi-chain" />
-            {/* <Img src={TestImg} alt="test img" /> */}
           </FeatureItem>
         </FeatureContent>
         <Footer>
