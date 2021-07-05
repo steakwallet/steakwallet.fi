@@ -331,8 +331,8 @@ const IndexPage = () => {
         </HeroContent>
         <FeatureContent>
           <FeatureItem>
-            {/* <MobileImg src={steakMobile} alt="Multi-chain" /> */}
-            <Img src={TestImg} alt="test img" />
+            <MobileImg src={steakMobile} alt="Multi-chain" />
+            {/* <Img src={TestImg} alt="test img" /> */}
           </FeatureItem>
         </FeatureContent>
         <Footer>
