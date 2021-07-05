@@ -16,6 +16,7 @@ import keys from "../images/keys.jpg";
 import SEO from "../components/seo";
 import ogImg from "../images/ogimage.png";
 import cta from "../images/cta.svg";
+import steakMobile from "../images/steakMobile.svg";
 import ape from "../images/ape.svg";
 
 const lg = "684px";
@@ -178,22 +179,6 @@ const HeroContent = styled.div`
   }
 `;
 
-const CTA = styled.a`
-  background-color: #fff;
-  color: #000;
-  padding: 1rem 1.5rem;
-  border-radius: 2rem;
-  display: inline-block;
-  font-size: 1.25rem;
-  line-height: 1rem;
-  cursor: pointer;
-  pointer-events: auto;
-  text-decoration: none;
-  &:hover {
-    background-color: #dedede;
-  }
-`;
-
 const AppleBtn = styled.img`
   width: 218px;
   height: auto;
@@ -222,20 +207,7 @@ const Ape = styled.img`
   }
 `;
 
-const MobileImg = styled.img`
-  // width: 218px;
-  // height: auto;
-  // margin-top: 1.5rem;
-  // cursor: pointer;
-  // position: relative;
-  // bottom: 5rem;
-  // @media (min-width: ${lg}) {
-  //   width: 218px;
-  // }
-`;
-
 const FeatureContent = styled.div`
-  // padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,25 +224,18 @@ const FeatureItem = styled.div`
   margin-bottom: 1rem;
   max-width: 817px;
   max-height: 1188px;
-  div {
-    padding: 2rem;
-  }
-  img {
-    width: 95%;
-    height: auto;
-  }
   @media (min-width: ${lg}) {
-    width: 45%;
+    width: 95%;
+    margin: -5rem;
   }
-  h3 {
-    font-weight: bold;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
+  @media (max-width: ${lg}) {
+    margin: -2rem;
   }
-  p {
-    line-height: 1.5rem;
-  }
+`;
+const MobileImg = styled.img`
+  width: 95%;
+  height: auto;
+  margin: -7rem;
 `;
 
 const Footer = styled.footer`
@@ -304,50 +269,6 @@ const Footer = styled.footer`
     }
 `;
 
-function Steak(props) {
-  const group = useRef();
-  const { nodes, materials } = useGLTF("/steak.glb");
-
-  const myMesh = React.useRef();
-  const [active, setActive] = useState(false);
-
-  const { scale } = useSpring({
-    scale: active ? 1.5 : 1,
-    config: config.wobbly,
-  });
-
-  useFrame(({ clock }) => {
-    const a = clock.getElapsedTime();
-    myMesh.current.rotation.x = a / 4;
-    myMesh.current.rotation.y = a / 6;
-    myMesh.current.rotation.z = -a / 6;
-  });
-
-  return (
-    <group
-      ref={group}
-      {...props}
-      dispose={null}
-      onClick={() => setActive(!active)}
-      onPress={() => setActive(!active)}
-    >
-      <group position={[-0.3, 0.39, 0.01]}>
-        <group position={[0.3, -0.39, -0.01]}>
-          <animated.mesh
-            geometry={nodes["node-0"].geometry}
-            material={materials.map_Ka}
-            position={[0, 0.37, 0]}
-            rotation={[0.18, 0.07, 0.98]}
-            scale={scale}
-            ref={myMesh}
-          />
-        </group>
-      </group>
-      <group position={[-6.95, 0.67, -2.94]} rotation={[1.59, -0.04, 1.99]} />
-    </group>
-  );
-}
-
 const IndexPage = () => {
   return (
     <>
@@ -357,37 +278,33 @@ const IndexPage = () => {
         description="Steakwallet is the easiest and safest way to steak your crypto assets across blockchains."
         image={"https://thesteakwallet.com" + ogImg}
       />
-      {/* <SpaceSteak>
-        <Canvas gl={{ alpha: false }} shadows dpr={[1, 2]}>
-          <color attach="background" args={["black"]} />
-          <ambientLight intensity={1.5} />
-          <Suspense fallback={null}>
-            <Steak />
-            <fog attach="fog" args={["black", 3, 5]} />
-          </Suspense>
-          <OrbitControls
-            minPolarAngle={Math.PI / 2}
-            maxPolarAngle={Math.PI / 2}
-            enableZoom={false}
-            enablePan={false}
-          />
-        </Canvas>
-      </SpaceSteak> */}
       <Main>
         <NavBar>
           <LogoImg src={logo} alt="Steakwallet" />
           <nav>
-            <a className="hide" href="#">
+            <a
+              className="hide"
+              href="https://www.notion.so/Steakwallet-Changelog-ec5fbe0843b941759d7fe9c70c95daf7"
+              target="_blank"
+            >
               Changelog
             </a>
-            <a className="hide" href="#">
+            <a
+              className="hide"
+              href="https://www.notion.so/Steakwallet-Help-Center-9d41301c2bf947ae94e44b2759dd24e6"
+              target="_blank"
+            >
               Support
             </a>
-            <a className="hide" href="#">
+            <a className="hide" href="#" target="_blank">
               LitePaper
             </a>
-            <a href="https://twitter.com/steakwallet">Twitter</a>
-            <a href="https://discord.gg/ZtdgjSEnRy">Discord</a>
+            <a href="https://twitter.com/steakwallet" target="_blank">
+              Twitter
+            </a>
+            <a href="https://discord.gg/ZtdgjSEnRy" target="_blank">
+              Discord
+            </a>
           </nav>
         </NavBar>
         <HeroContent>
@@ -397,58 +314,35 @@ const IndexPage = () => {
             as easy as possible. Start earning interest on your coins in
             seconds!
           </p>
-          {/* <CTA href="https://form.typeform.com/to/Qemm4FMQ">
-            Sign up for early access
-          </CTA> */}
-          <a href="https://form.typeform.com/to/Qemm4FMQ" target="_blank">
-            <AppleBtn src={appleBtn} alt="Download app btn" />
-          </a>
+
+          <div>
+            <a href="https://form.typeform.com/to/Qemm4FMQ" target="_blank">
+              <AppleBtn src={appleBtn} alt="Download app btn" />
+            </a>
+          </div>
           <AndroidBtn src={androidBtn} alt="Android coming soon" />
         </HeroContent>
         <FeatureContent>
           <FeatureItem>
-            <MobileImg src={cta} alt="Multi-chain" />
-            {/* <div>
-              <h3>Multi-Chain Support</h3>
-              <p>
-                Steakwallet is multi-chain, so you don’t need a different wallet
-                for each blockchain. We’re adding support for new tokens and
-                chains fast!
-              </p>
-            </div> */}
+            <MobileImg src={steakMobile} alt="Multi-chain" />
           </FeatureItem>
-          {/* <FeatureItem>
-            <img src={easy} alt="Easy steaking" />
-            <div>
-              <h3>The Easiest Steaking Flow</h3>
-              <p>
-                Steakwallet makes steaking as easy as it gets. Forget complex
-                workflows such as delegation, rewards claiming, or minting –
-                Steakwallet automates every step possible. We only work with the
-                most trusted and reliable validators, so you can relax and just
-                enjoy your meaty returns.
-              </p>
-            </div>
-          </FeatureItem>
-          <FeatureItem>
-            <img src={keys} alt="Keys" />
-            <div>
-              <h3>Your Keys Your Crypto</h3>
-              <p>
-                Steakwallet is non-custodial and gives you full ownership over
-                your own keys. This means that only you can access your wallet
-                and you are in full control of your crypto.
-              </p>
-            </div>
-          </FeatureItem> */}
-          {/* <Ape src={ape} alt="Apes together strong" /> */}
         </FeatureContent>
         <Footer>
           <Ape src={ape} alt="Apes together strong" />
           <div>
             <p>© 2021 Steakwallet LLC</p>
-            <a href="#">Terms of use</a>
-            <a href="#">Privacy Policy</a>
+            <a
+              href="https://www.notion.so/Steakwallet-Terms-of-Use-adee5a91afab4eb58bd89b6d170504d8"
+              target="_blank"
+            >
+              Terms of use
+            </a>
+            <a
+              href="https://www.notion.so/Steakwallet-LLC-Privacy-Policy-229936f3d6d941cb93c72b5dc1e07f76"
+              target="_blank"
+            >
+              Privacy Policy
+            </a>
           </div>
         </Footer>
       </Main>
