@@ -17,6 +17,7 @@ import SEO from "../components/seo";
 import ogImg from "../images/ogimage.png";
 import cta from "../images/cta.svg";
 import steakMobile from "../images/steakMobile.svg";
+import TestImg from "../images/testIMG.jpg";
 import ape from "../images/ape.svg";
 
 const lg = "684px";
@@ -226,18 +227,20 @@ const FeatureItem = styled.div`
   max-height: 1188px;
   @media (min-width: ${lg}) {
     width: 95%;
-    margin: -5rem;
-  }
-  @media (max-width: ${lg}) {
-    margin: -2rem;
+    margin: -7rem;
   }
 `;
 const MobileImg = styled.img`
   width: 95%;
   height: auto;
-  margin: -7rem;
+  margin: -4rem;
 `;
 
+const Img = styled.img`
+  width: 95%;
+  height: auto;
+  margin: -4rem;
+`;
 const Footer = styled.footer`
   color: black;
   padding: 3rem;
@@ -315,16 +318,21 @@ const IndexPage = () => {
             seconds!
           </p>
 
-          <div>
+          <div style={{ zIndex: "100" }}>
             <a href="https://form.typeform.com/to/Qemm4FMQ" target="_blank">
               <AppleBtn src={appleBtn} alt="Download app btn" />
             </a>
           </div>
-          <AndroidBtn src={androidBtn} alt="Android coming soon" />
+          <AndroidBtn
+            style={{ zIndex: "100" }}
+            src={androidBtn}
+            alt="Android coming soon"
+          />
         </HeroContent>
         <FeatureContent>
           <FeatureItem>
-            <MobileImg src={steakMobile} alt="Multi-chain" />
+            {/* <MobileImg src={steakMobile} alt="Multi-chain" /> */}
+            <Img src={TestImg} alt="test img" />
           </FeatureItem>
         </FeatureContent>
         <Footer>
