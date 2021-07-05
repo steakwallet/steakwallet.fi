@@ -286,20 +286,17 @@ const IndexPage = () => {
           <nav>
             <a
               className="hide"
-              href="https://www.notion.so/Steakwallet-Changelog-ec5fbe0843b941759d7fe9c70c95daf7"
+              href="https://steakwallet.fi/changelog"
               target="_blank"
             >
               Changelog
             </a>
             <a
               className="hide"
-              href="https://www.notion.so/Steakwallet-Help-Center-9d41301c2bf947ae94e44b2759dd24e6"
+              href="https://steakwallet.fi/support"
               target="_blank"
             >
               Support
-            </a>
-            <a className="hide" href="#" target="_blank">
-              LitePaper
             </a>
             <a href="https://twitter.com/steakwallet" target="_blank">
               Twitter
@@ -337,16 +334,10 @@ const IndexPage = () => {
           <Ape src={ape} alt="Apes together strong" />
           <div>
             <p>© 2021 Steakwallet LLC</p>
-            <a
-              href="https://www.notion.so/Steakwallet-Terms-of-Use-adee5a91afab4eb58bd89b6d170504d8"
-              target="_blank"
-            >
+            <a href="https://steakwallet.fi/terms" target="_blank">
               Terms of use
             </a>
-            <a
-              href="https://www.notion.so/Steakwallet-LLC-Privacy-Policy-229936f3d6d941cb93c72b5dc1e07f76"
-              target="_blank"
-            >
+            <a href="https://steakwallet.fi/privacy" target="_blank">
               Privacy Policy
             </a>
           </div>
