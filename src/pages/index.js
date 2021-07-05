@@ -16,7 +16,7 @@ import keys from "../images/keys.jpg";
 import SEO from "../components/seo";
 import ogImg from "../images/ogimage.png";
 import cta from "../images/cta.svg";
-import steakMobile from "../images/steakMobile.jpg";
+import steakMobile from "../images/steakMobile.png";
 import ape from "../images/ape.svg";
 
 const lg = "684px";
@@ -70,24 +70,12 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const SpaceSteak = styled.div`
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-`;
-
 const Main = styled.main`
   padding: 0;
   margin: 0;
   position: relative;
   z-index: 2;
   position: relative;
-  @media (min-width: ${lg}) {
-    pointer-events: none;
-  }
 `;
 
 const NavBar = styled.div`
@@ -106,7 +94,6 @@ const NavBar = styled.div`
     font-size: 0.75rem;
     color: black;
     text-decoration: none;
-    pointer-events: auto;
     font-family: ${interReg};
     font-weight: 500;
     &:hover {
@@ -149,7 +136,7 @@ const HeroContent = styled.div`
   h1 {
     max-width: 90vw;
     font-weight: 700;
-    font-size: clamp(16px, 15vw, 56px);
+    font-size: clamp(16px, 15vw, 48px);
     line-height: 1em;
     margin-bottom: 1rem;
     letter-spacing: -0.06em;
@@ -183,13 +170,17 @@ const AppleBtn = styled.img`
   width: 218px;
   height: auto;
   cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+  &:hover{
+    transform: scale(1.06);
+  }
 `;
 
 const AndroidBtn = styled.img`
   width: 218px;
   height: auto;
   margin-top: 1.5rem;
-  cursor: pointer;
   @media (min-width: ${lg}) {
     width: 218px;
   }
@@ -199,7 +190,6 @@ const Ape = styled.img`
   width: 218px;
   height: auto;
   margin-top: 1.5rem;
-  cursor: pointer;
   position: relative;
   bottom: 5rem;
   @media (min-width: ${lg}) {
@@ -211,35 +201,16 @@ const FeatureContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  max-width: 1280px;
-  margin: 0 auto 4rem auto;
+  margin: 1rem 0 4rem 0;
 `;
 
-const FeatureItem = styled.div`
-  border-radius: 2rem;
-  color: #fff;
-  overflow: hidden;
-  text-align: center;
-  margin-bottom: 1rem;
-  max-width: 817px;
-  max-height: 1188px;
-  @media (min-width: ${lg}) {
-    width: 95%;
-    margin: -7rem;
-  }
-`;
 const MobileImg = styled.img`
-  width: 95%;
+  width: 100%;
+  max-width: 740px;
   height: auto;
-  margin: -4rem;
+  margin-left: -2.75%;
 `;
 
-const Img = styled.img`
-  width: 95%;
-  height: auto;
-  margin: -4rem;
-`;
 const Footer = styled.footer`
   color: black;
   padding: 3rem;
@@ -261,7 +232,6 @@ const Footer = styled.footer`
   a {
     color: black;
     text-decoration: none;
-    pointer-events: auto;
     padding-top:.5rem;
 
     font-weight:400;
@@ -314,7 +284,7 @@ const IndexPage = () => {
             seconds!
           </p>
 
-          <div style={{ zIndex: "100" }}>
+          <div>
             <a
               href="https://apps.apple.com/app/steakwallet/id1569375204?l=en"
               target="_blank"
@@ -329,9 +299,7 @@ const IndexPage = () => {
           />
         </HeroContent>
         <FeatureContent>
-          <FeatureItem>
-            <MobileImg src={steakMobile} alt="Multi-chain" />
-          </FeatureItem>
+            <MobileImg src={steakMobile} alt="Steakwallet App on iOS Device" />
         </FeatureContent>
         <Footer>
           <Ape src={ape} alt="Apes together strong" />
