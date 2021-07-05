@@ -315,7 +315,10 @@ const IndexPage = () => {
           </p>
 
           <div style={{ zIndex: "100" }}>
-            <a href="https://form.typeform.com/to/Qemm4FMQ" target="_blank">
+            <a
+              href="https://apps.apple.com/us/app/steakwallet/id1569375204"
+              target="_blank"
+            >
               <AppleBtn src={appleBtn} alt="Download app btn" />
             </a>
           </div>
