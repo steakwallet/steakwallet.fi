@@ -6,7 +6,7 @@ import { createGlobalStyle } from "styled-components";
 import { useSpring, animated, config } from "@react-spring/three";
 import logo from "../images/newLogo.svg";
 import appleBtn from "../images/appleBtn.svg";
-import androidBtn from "../images/android_coming_soon.svg";
+import androidBtn from "../images/androidBtn.svg";
 import flexaReg from "../fonts/GT-Flexa-Standard-Regular.woff2";
 import flexaBold from "../fonts/GT-Flexa-Standard-Bold.woff2";
 import interReg from "../fonts/Inter-Regular.ttf";
@@ -172,17 +172,20 @@ const AppleBtn = styled.img`
   cursor: pointer;
   transform: scale(1);
   transition: transform 0.2s ease-out;
-  &:hover{
+  &:hover {
     transform: scale(1.06);
   }
 `;
 
 const AndroidBtn = styled.img`
-  width: 218px;
+  width: 248px;
   height: auto;
-  margin-top: 1.5rem;
-  @media (min-width: ${lg}) {
-    width: 218px;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+  &:hover {
+    transform: scale(1.06);
   }
 `;
 
@@ -202,6 +205,12 @@ const FeatureContent = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 1rem 0 4rem 0;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const MobileImg = styled.img`
@@ -284,22 +293,27 @@ const IndexPage = () => {
             seconds!
           </p>
 
-          <div>
+          <ButtonContainer>
             <a
               href="https://apps.apple.com/app/steakwallet/id1569375204?l=en"
               target="_blank"
             >
               <AppleBtn src={appleBtn} alt="Download app btn" />
             </a>
-          </div>
-          <AndroidBtn
-            style={{ zIndex: "100" }}
-            src={androidBtn}
-            alt="Android coming soon"
-          />
+            <a
+              href="https://play.google.com/store/apps/details?id=fi.steakwallet.app"
+              target="_blank"
+            >
+              <AndroidBtn
+                style={{ zIndex: "100" }}
+                src={androidBtn}
+                alt="Android coming soon"
+              />
+            </a>
+          </ButtonContainer>
         </HeroContent>
         <FeatureContent>
-            <MobileImg src={steakMobile} alt="Steakwallet App on iOS Device" />
+          <MobileImg src={steakMobile} alt="Steakwallet App on iOS Device" />
         </FeatureContent>
         <Footer>
           <Ape src={ape} alt="Apes together strong" />
