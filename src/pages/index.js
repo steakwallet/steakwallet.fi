@@ -166,24 +166,13 @@ const HeroContent = styled.div`
   }
 `;
 
-const AppleBtn = styled.img`
+const StoreBtn = styled.img`
   width: 218px;
   height: auto;
   cursor: pointer;
   transform: scale(1);
   transition: transform 0.2s ease-out;
-  &:hover {
-    transform: scale(1.06);
-  }
-`;
-
-const AndroidBtn = styled.img`
-  width: 248px;
-  height: auto;
-  margin: 0 1.5rem;
-  cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.2s ease-out;
+  margin-bottom: 0.5rem;
   &:hover {
     transform: scale(1.06);
   }
@@ -298,16 +287,16 @@ const IndexPage = () => {
               href="https://apps.apple.com/app/steakwallet/id1569375204?l=en"
               target="_blank"
             >
-              <AppleBtn src={appleBtn} alt="Download app btn" />
+              <StoreBtn src={appleBtn} alt="Download on the app store" />
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=fi.steakwallet.app"
               target="_blank"
             >
-              <AndroidBtn
+              <StoreBtn
                 style={{ zIndex: "100" }}
                 src={androidBtn}
-                alt="Android coming soon"
+                alt="Get on google play"
               />
             </a>
           </ButtonContainer>
