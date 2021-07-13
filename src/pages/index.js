@@ -170,6 +170,7 @@ const AppleBtn = styled.img`
   width: 218px;
   height: auto;
   cursor: pointer;
+  margin-bottom: 0.5rem;
   transform: scale(1);
   transition: transform 0.2s ease-out;
   &:hover {
@@ -178,9 +179,8 @@ const AppleBtn = styled.img`
 `;
 
 const AndroidBtn = styled.img`
-  width: 248px;
+  width: 218px;
   height: auto;
-  margin: 0 1.5rem;
   cursor: pointer;
   transform: scale(1);
   transition: transform 0.2s ease-out;
