@@ -3,8 +3,7 @@
     "details": {
       "WX7M2WRQM3.com.thesteakwallet.app": {
         "paths": [
-          "/wc",
-          "/wc/*"
+          "*"
         ]
       }
     },
