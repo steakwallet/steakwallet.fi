@@ -265,6 +265,13 @@ const IndexPage = () => {
           <nav>
             <a
               className="hide"
+              href="https://blog.steakwallet.fi"
+              target="_blank"
+            >
+              Blog
+            </a>
+            <a
+              className="hide"
               href="https://steakwallet.fi/changelog"
               target="_blank"
             >
