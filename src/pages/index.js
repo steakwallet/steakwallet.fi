@@ -263,6 +263,13 @@ const IndexPage = () => {
         <NavBar>
           <LogoImg src={logo} alt="Steakwallet" />
           <nav>
+           <a
+              className="hide"
+              href="https://airdrops.steakwallet.fi"
+              target="_blank"
+            >
+              Airdrops
+            </a>
             <a
               className="hide"
               href="https://blog.steakwallet.fi"
